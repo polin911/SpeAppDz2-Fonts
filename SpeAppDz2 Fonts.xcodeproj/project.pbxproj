@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		364A85981E6F00A100A9C0C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A85971E6F00A100A9C0C1 /* AppDelegate.swift */; };
-		364A859A1E6F00A100A9C0C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A85991E6F00A100A9C0C1 /* ViewController.swift */; };
 		364A859D1E6F00A100A9C0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364A859B1E6F00A100A9C0C1 /* Main.storyboard */; };
 		364A859F1E6F00A100A9C0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364A859E1E6F00A100A9C0C1 /* Assets.xcassets */; };
 		364A85A21E6F00A100A9C0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364A85A01E6F00A100A9C0C1 /* LaunchScreen.storyboard */; };
+		364A85AA1E6F012D00A9C0C1 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A85A91E6F012D00A9C0C1 /* FontsViewController.swift */; };
+		364A85AF1E6F04A100A9C0C1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A85AE1E6F04A100A9C0C1 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		364A85941E6F00A100A9C0C1 /* SpeAppDz2 Fonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpeAppDz2 Fonts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		364A85971E6F00A100A9C0C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		364A85991E6F00A100A9C0C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		364A859C1E6F00A100A9C0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		364A859E1E6F00A100A9C0C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		364A85A11E6F00A100A9C0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		364A85A31E6F00A100A9C0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364A85A91E6F012D00A9C0C1 /* FontsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
+		364A85AE1E6F04A100A9C0C1 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				364A85961E6F00A100A9C0C1 /* SpeAppDz2 Fonts */,
+				364A859B1E6F00A100A9C0C1 /* Main.storyboard */,
 				364A85951E6F00A100A9C0C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,14 +57,38 @@
 		364A85961E6F00A100A9C0C1 /* SpeAppDz2 Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				364A85AC1E6F046900A9C0C1 /* Model */,
+				364A85AD1E6F048900A9C0C1 /* Stuff */,
+				364A85AB1E6F045000A9C0C1 /* Controller */,
+			);
+			path = "SpeAppDz2 Fonts";
+			sourceTree = "<group>";
+		};
+		364A85AB1E6F045000A9C0C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				364A85A91E6F012D00A9C0C1 /* FontsViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		364A85AC1E6F046900A9C0C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				364A85AE1E6F04A100A9C0C1 /* Fonts.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		364A85AD1E6F048900A9C0C1 /* Stuff */ = {
+			isa = PBXGroup;
+			children = (
 				364A85971E6F00A100A9C0C1 /* AppDelegate.swift */,
-				364A85991E6F00A100A9C0C1 /* ViewController.swift */,
-				364A859B1E6F00A100A9C0C1 /* Main.storyboard */,
 				364A859E1E6F00A100A9C0C1 /* Assets.xcassets */,
 				364A85A01E6F00A100A9C0C1 /* LaunchScreen.storyboard */,
 				364A85A31E6F00A100A9C0C1 /* Info.plist */,
 			);
-			path = "SpeAppDz2 Fonts";
+			name = Stuff;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364A859A1E6F00A100A9C0C1 /* ViewController.swift in Sources */,
 				364A85981E6F00A100A9C0C1 /* AppDelegate.swift in Sources */,
+				364A85AF1E6F04A100A9C0C1 /* Fonts.swift in Sources */,
+				364A85AA1E6F012D00A9C0C1 /* FontsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +178,7 @@
 				364A859C1E6F00A100A9C0C1 /* Base */,
 			);
 			name = Main.storyboard;
+			path = "SpeAppDz2 Fonts";
 			sourceTree = "<group>";
 		};
 		364A85A01E6F00A100A9C0C1 /* LaunchScreen.storyboard */ = {
