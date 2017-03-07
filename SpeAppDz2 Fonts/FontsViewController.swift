@@ -11,10 +11,13 @@ import UIKit
 class FontsViewController: UIViewController {
 
     let familyFontName = UIFont.familyNames
+    var indexOfFont = [0]
+    var nameFonts: String = ""
+    
     
     @IBOutlet var tableView: UITableView!
     
-   let fontFamilyNames = UIFont.familyNames
+  
     
     
     override func viewDidLoad() {
@@ -30,6 +33,15 @@ class FontsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let segueDestination = segue.destination as? ResultFontsViewController,
+           
+            let nameFFF = sender as? String
+            {
+            segueDestination.nameF = nameFFF
+        }
+        
+    }
 
 }
 
@@ -41,15 +53,23 @@ extension FontsViewController:UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let nameOfFonts = familyFontName[indexPath.row]
+        
+        self.nameFonts = nameOfFonts
         cell.textLabel?.font = UIFont(name: nameOfFonts, size: 16)
         cell.textLabel?.text = familyFontName[indexPath.row]
         
         return cell
     }
+    
 }
 
 extension FontsViewController:UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "Result Font", sender: familyFontName[indexPath.row])
+        
+        
+    }
 }
 
 
