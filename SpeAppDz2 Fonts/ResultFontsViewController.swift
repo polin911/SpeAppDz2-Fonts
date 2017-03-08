@@ -23,11 +23,7 @@ class ResultFontsViewController: UIViewController {
         
        
         labelResultFonts.font = UIFont(name: nameF, size: 25)
-
-       
         
     }
-
-
 
 }

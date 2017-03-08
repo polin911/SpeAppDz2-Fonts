@@ -33,11 +33,11 @@ class FontsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let segueDestination = segue.destination as? ResultFontsViewController,
            
-            let nameFFF = sender as? String
-            {
+            let nameFFF = sender as? String {
             segueDestination.nameF = nameFFF
         }
         
