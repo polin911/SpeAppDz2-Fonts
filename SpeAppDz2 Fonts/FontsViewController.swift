@@ -46,9 +46,18 @@ class FontsViewController: UIViewController {
 }
 
 extension FontsViewController:UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return familyFontName.count
+        
+        var newArray = [""]
+        for familyName in familyFontName {
+            let names = UIFont.fontNames(forFamilyName: familyName)
+            newArray.append(contentsOf: names)
+        }
+        return newArray.count
     }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
